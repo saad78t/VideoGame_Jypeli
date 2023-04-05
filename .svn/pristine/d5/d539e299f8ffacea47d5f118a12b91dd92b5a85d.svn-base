@@ -1,0 +1,140 @@
+﻿using System;
+using System.Collections.Generic;
+using Jypeli;
+using Jypeli.Assets;
+using Jypeli.Controls;
+using Jypeli.Widgets;
+
+public class floating_ball : PhysicsGame
+{
+    PhysicsObject ball2;
+
+    private void HittingVector(Vector suunta)
+    {
+        ball2.Velocity = suunta;
+    }
+
+
+    /// <summary>
+    /// creating the ball
+    /// </summary>
+    /// <param name="peli"></param>
+    /// <param name="x"></param>
+    /// <param name="y"></param>
+    public void drawball(Game peli, double x, double y)
+    {
+        ball2 = new PhysicsObject(2 * 25, 2 * 25, Shape.Circle);
+        ball2.Position = new Vector(-450, -350);
+        ball2.Color = Color.Red;
+        ball2.Tag = "vihu";
+        peli.Add(ball2);
+        AddCollisionHandler(ball2, "vihu", PelaajaTormasi);
+    }
+
+
+    /// <summary>
+    /// creating the obstacle1
+    /// </summary>
+    /// <param name="peli"></param>
+    /// <param name="x"></param>
+    /// <param name="y"></param>
+    /// <param name="boxsize"></param>
+    public void drawsquare(Game peli, double x, double y, double boxsize)
+    {
+        PhysicsObject square = new PhysicsObject(boxsize, boxsize, Shape.Rectangle);
+        square.X = x;
+        square.Y = y;
+        square.Color = Color.Blue;
+        AddCollisionHandler(square, "vihu", PelaajaTormasi);
+        peli.Add(square);
+    }
+
+
+    /// <summary>
+    /// creating the obstacle1
+    /// </summary>
+    /// <param name="peli"></param>
+    /// <param name="x"></param>
+    /// <param name="y"></param>
+    /// <param name="boxsize"></param>
+    public void drawsquare2(Game peli, double x, double y, double boxsize)
+    {
+        PhysicsObject square2 = new PhysicsObject(boxsize, boxsize, Shape.Rectangle);
+        square2.X = x;
+        square2.Y = y;
+        square2.Color = Color.Green;
+        AddCollisionHandler(square2, "vihu", PelaajaTormasi);
+        peli.Add(square2);
+    }
+
+
+
+    public override void Begin()
+    {
+        Level.Size = Screen.Size;
+        // Level.Width = Screen.Width
+        // Level.Height = Screen.Height;
+        Camera.ZoomToLevel();
+        Level.CreateBorders();
+        Level.Background.Color = Color.White;
+
+        /// calling the Subroutine of the ball
+        drawball(this, 0, 0);
+
+       ///calling the subrourine of the obstacle1 ( it is an object ) to become six obstacles 
+        int n;
+        n = 6;
+        double boxsize = 2*35;
+        double xcoordinate = -340;
+        double ycoordinate = -340;
+        double oldboxsize = 0;
+        
+        for (int i = 0; i < n; i++)
+        {
+            oldboxsize = boxsize;
+            drawsquare(this, xcoordinate,  ycoordinate, boxsize);
+            xcoordinate = xcoordinate + 100 + 75;
+            boxsize = boxsize * 0.5 + oldboxsize * 0.6;
+        }
+
+
+        ///calling the subrourine of the obstacle2 ( it is an object ) to become six obstacles 
+        int y;
+        y = 6;
+        double boxsize2 = 2 * 40;
+        double xcoordinate1 = -400;
+        double ycoordinate2 = 300;
+        for (int i = 0; i < y; i++)
+        {
+
+            drawsquare2(this, xcoordinate1, ycoordinate2, boxsize2);
+            xcoordinate1 = xcoordinate1 + 100 + 50;
+        }
+
+
+
+
+
+        Keyboard.Listen(Key.Up, ButtonState.Pressed, HittingVector, "Lyö valkoinen palloa ylöspäin", new Vector(0, 100));
+        Keyboard.Listen(Key.Down, ButtonState.Pressed, HittingVector, "Lyö valkoinen palloa ylöspäin", new Vector(0, -100));
+        Keyboard.Listen(Key.Left, ButtonState.Pressed, HittingVector, "Lyö valkoinen palloa ylöspäin", new Vector(-100, 0));
+        Keyboard.Listen(Key.Right, ButtonState.Pressed, HittingVector, "Lyö valkoinen palloa ylöspäin", new Vector(100, 0));
+        
+
+
+
+
+        PhoneBackButton.Listen(ConfirmExit, "Lopeta peli");
+        Keyboard.Listen(Key.Escape, ButtonState.Pressed, ConfirmExit, "Lopeta peli");
+    }
+
+
+    public void PelaajaTormasi(PhysicsObject pelaaja, PhysicsObject vihu)
+    {
+            Explosion rajahdys = new Explosion(vihu.Width * 100);
+            rajahdys.Position = vihu.Position;
+            rajahdys.UseShockWave = false;
+            this.Add(rajahdys);
+            Remove(vihu);
+    }
+}

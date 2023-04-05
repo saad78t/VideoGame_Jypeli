@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/Omistaja/Desktop/new operation area/test game - Copy of copy/floating ball/floating ball/Content/village.png</File>
+    <File>C:/Users/Omistaja/Desktop/new operation area/test game - Copy of copy/floating ball/floating ball/Content/ball.png</File>
+    <File>C:/Users/Omistaja/Desktop/new operation area/test game - Copy of copy/floating ball/floating ball/Content/tiiliseina.png</File>
+    <File>C:/Users/Omistaja/Desktop/new operation area/test game - Copy of copy/floating ball/floating ball/Content/tahti.png</File>
+    <File>C:/Users/Omistaja/Desktop/new operation area/test game - Copy of copy/floating ball/floating ball/Content/background.jpg</File>
+    <File>C:/Users/Omistaja/Desktop/new operation area/test game - Copy of copy/floating ball/floating ball/Content/kentta.txt</File>
+    <File>C:/Users/Omistaja/Desktop/new operation area/test game - Copy of copy/floating ball/floating ball/Content/Cigur.png</File>
+    <File>C:/Users/Omistaja/Desktop/new operation area/test game - Copy of copy/floating ball/floating ball/Content/King.png</File>
+    <File>C:/Users/Omistaja/Desktop/new operation area/test game - Copy of copy/floating ball/floating ball/Content/Leader.png</File>
+    <File>C:/Users/Omistaja/Desktop/new operation area/test game - Copy of copy/floating ball/floating ball/Content/eat.WAV</File>
+    <File>C:/Users/Omistaja/Desktop/new operation area/test game - Copy of copy/floating ball/floating ball/Content/explosion1.WAV</File>
+    <File>C:/Users/Omistaja/Desktop/new operation area/test game - Copy of copy/floating ball/floating ball/Content/cup.jpg</File>
+  </SourceFiles>
+</SourceFileCollection>

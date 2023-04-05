@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/Omistaja/Desktop/final shape - Copy - Copy/floating ball/floating ball/Content/ball.png</File>
+    <File>C:/Users/Omistaja/Desktop/final shape - Copy - Copy/floating ball/floating ball/Content/tahti.png</File>
+    <File>C:/Users/Omistaja/Desktop/final shape - Copy - Copy/floating ball/floating ball/Content/kentta.txt</File>
+    <File>C:/Users/Omistaja/Desktop/final shape - Copy - Copy/floating ball/floating ball/Content/eat.WAV</File>
+    <File>C:/Users/Omistaja/Desktop/final shape - Copy - Copy/floating ball/floating ball/Content/explosion1.WAV</File>
+    <File>C:/Users/Omistaja/Desktop/final shape - Copy - Copy/floating ball/floating ball/Content/obs1.jpg</File>
+    <File>C:/Users/Omistaja/Desktop/final shape - Copy - Copy/floating ball/floating ball/Content/wall.jpg</File>
+    <File>C:/Users/Omistaja/Desktop/final shape - Copy - Copy/floating ball/floating ball/Content/obs.png</File>
+    <File>C:/Users/Omistaja/Desktop/final shape - Copy - Copy/floating ball/floating ball/Content/wall1.png</File>
+    <File>C:/Users/Omistaja/Desktop/final shape - Copy - Copy/floating ball/floating ball/Content/cup.jpg</File>
+    <File>C:/Users/Omistaja/Desktop/final shape - Copy - Copy/floating ball/floating ball/Content/victory.wav</File>
+  </SourceFiles>
+</SourceFileCollection>

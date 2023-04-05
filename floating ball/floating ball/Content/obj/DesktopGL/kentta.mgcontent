@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/MyTemp/ohj1/igsaturk/floating ball/floating ball/Content/kentta.txt</SourceFile>
+  <SourceTime>2018-11-27T13:29:41.1214154+02:00</SourceTime>
+  <DestFile>C:/MyTemp/ohj1/igsaturk/floating ball/floating ball/Content/bin/DesktopGL/kentta.xnb</DestFile>
+  <DestTime>2018-11-27T13:31:25.6979653+02:00</DestTime>
+  <Importer>TextFileImporter</Importer>
+  <ImporterTime>2018-08-30T18:14:34+03:00</ImporterTime>
+  <Processor>TextFileContentProcessor</Processor>
+  <ProcessorTime>2018-08-30T18:14:34+03:00</ProcessorTime>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>
